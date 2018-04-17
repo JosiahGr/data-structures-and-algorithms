@@ -8,6 +8,6 @@ Reverse an array of numbers without using the built in method '.reverse()' to so
 
 ## Solution
 
-![reverse-an-array] (/assets/reverse-an-array.JPG)
+![reverse-an-array] (assets/reverse-an-array.JPG)
 
-![reverse-an-array-js] (/assets/reverse-an-array-js.JPG)
+![reverse-an-array-js] (assets/reverse-an-array-js.JPG)
