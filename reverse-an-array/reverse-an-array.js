@@ -1,6 +1,6 @@
 function reverseArr(num) {
-  var newArray = [];
-  for(let i = num.length - 1; i >= 0; i--) {
+  const newArray = [];
+  for (let i = num.length - 1; i >= 0; i--) {
     newArray.push(num[i]);
   }
   return newArray;
