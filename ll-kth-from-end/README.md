@@ -4,4 +4,4 @@ Write a method for the Linked List class called kthFromEnd which takes a number,
 
 ## Solution 
 
-
+![img_0059](https://user-images.githubusercontent.com/34176171/39216495-bda6fa4e-47d0-11e8-8d06-bcd146a9c1f2.JPG)
