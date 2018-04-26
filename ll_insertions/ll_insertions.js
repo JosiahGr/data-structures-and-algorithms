@@ -9,48 +9,55 @@ module.exports = class LinkedList {
   }
 
   append(value) {
-    let currentNode = new Node(value);
+    const node = new Node(value);
 
-    if (this.head === null) {
-      currentNode = value;
-    } while (this.head.next !== null) {
-      currentNode = currentNode.head.next.value;
-    } 
-    currentNode = this.head.value;
-    return currentNode;
+    if (!this.head) {
+      this.head = node;
+      return this;
+    }
+    let currentNode = this.head;
+    while (currentNode.next) {
+      currentNode = currentNode.next;
+    }
+    currentNode.next = node;
+    return this;
   }
 
   insertBefore(value, newValue) {
-    let currentNode = new Node(newValue);
-
-    if (this.head === null) {
-      currentNode = this.head.newValue;
-    } while (this.head.next !== value) {
-      currentNode = this.head.newValue;
-    } if (this.head.next === value) {
-      currentNode = this.head.newValue;
+    const node = new Node(newValue);
+    let backOne = this.head;
+    let currentOne = backOne.next;
+    
+    while (currentOne) {
+      if (currentOne.value === value) {
+        backOne.next = node;
+        node.next = currentOne;
+        return this;
+      }
+      backOne = currentOne;
+      currentOne = currentOne.next;
     }
-    return currentNode;
+    return null;
   }
 
   insertAfter(value, newValue) {
-    let currentNode = new Node(newValue); 
+    const node = new Node(newValue);
+    let currentOne = this.head;
 
-    if (this.head === null) {
-      currentNode = this.head.newValue;
-    } while (this.head.next !== value) {
-      currentNode = this.head.next.newValue;
-    } if (this.head.next === value) {
-      currentNode = this.head.newValue;
+    if (!this.head) {
+      this.head = node;
+      return this;
     }
-    return currentNode;
-  }
-
-  insertAtHead(value) {
-    const node = new Node(value);
-
-    node.next = this.head;
-    this.head = node; 
+    
+    while (currentOne) {
+      if (currentOne.value === value) {
+        const placeholder = currentOne.next;
+        currentOne.next = node;
+        currentOne.next.next = placeholder;
+        break;
+      }
+      currentOne = currentOne.next;
+    }
     return this;
   }
 };
