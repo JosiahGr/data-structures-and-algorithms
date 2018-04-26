@@ -9,3 +9,4 @@ You have access to the Node class and all the properties on the Linked List clas
 
 ## solution
 
+![img_0057 2](https://user-images.githubusercontent.com/34176171/39313577-35a18dbe-4927-11e8-9f68-010279682bc2.JPG)
