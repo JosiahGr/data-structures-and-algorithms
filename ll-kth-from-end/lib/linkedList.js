@@ -36,7 +36,6 @@ module.exports = class LinkedList {
     for (let index = 0; index <= counter - 1; index++) {
       nodeValue = nodeValue.next;
     }
-    console.log(nodeValue.value);
     return nodeValue.value;
   }
 };

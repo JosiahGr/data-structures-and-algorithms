@@ -16,7 +16,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "eslint . && jest --coverage"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
