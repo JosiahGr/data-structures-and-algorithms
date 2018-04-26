@@ -4,3 +4,4 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 
 # Solutions
 
+![img_0061](https://user-images.githubusercontent.com/34176171/39316055-15dec11c-492d-11e8-88fb-b4ec724240b7.JPG)
