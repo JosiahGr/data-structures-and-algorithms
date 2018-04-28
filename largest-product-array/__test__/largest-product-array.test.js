@@ -1,15 +1,11 @@
 'use strict';
 
-const highestProduct = require('../largest-product-array');
+const product = require('../largest-product-array');
 
-describe('a', () => {
-  test('Should return even', () => {
-    expect(highestProduct([[1, 2], [2, 3], [3, 4]])).toEqual(12);
-  });
-  test('b', () => {
-    expect(highestProduct([[6, 4], [12, 3], [8, 4]])).toEqual(96);
-  });
-  test('c', () => {
-    expect(highestProduct([[1, 2, 3], [2, 3, 4], [3, 4, 5]])).toEqual(20);
+describe('largest-product-array.js', () => {
+  test('Should return the highest product', () => {
+    expect(product([[1, 2], [1, 2], [2, 3]])).toEqual(6);
+    expect(product([[1, 2, 3], [1, 2, 5], [1, 2, 3]])).toEqual(15);
+    expect(product([[1], [1], [2]])).toEqual(2);
   });
 });
