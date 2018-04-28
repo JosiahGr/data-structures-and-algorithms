@@ -1,5 +1,9 @@
 'use strict';
 
+// Big O
+// space O(n)
+// time 0(n) -> n + (n - k)
+
 const Node = require('./node');
 
 module.exports = class LinkedList {
