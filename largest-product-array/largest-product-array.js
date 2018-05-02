@@ -16,3 +16,5 @@ function largestProductArray(arr) {
   }
   return highestProduct;
 }
+
+largestProductArray();
