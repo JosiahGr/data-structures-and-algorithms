@@ -6,4 +6,4 @@ dequeue(pref): returns either a dog or a cat. If pref, a string, is ‘cat’ re
 
 #### Solution
 
-
+![img_0071](https://user-images.githubusercontent.com/34176171/39532653-1646ca46-4de2-11e8-9738-0b0fc8bfa4ce.JPG)
