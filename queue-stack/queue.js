@@ -14,7 +14,7 @@ class Queue {
       return this.stack2.pop();
     }
     while (this.stack1.head) {
-      this.stackB.push(this.stack1.pop());
+      this.stack2.push(this.stack1.pop());
     }
     return this.stack2.pop();
   }
