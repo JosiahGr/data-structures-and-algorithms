@@ -14,18 +14,17 @@ class AnimalShelter {
 
   dequeue(pref) {
     const queueLength = this.queue.length - 1;
-    let tempAnimal = null;
-    if (this.queue.type === pref) {
+    if (!pref || this.queue.type === pref) {
       this.queue.pop();
       return this;
     } 
     for (let i = queueLength; i >= 0; i--) {
       if (this.queue[i].type === pref) {
-        tempAnimal = this.queue.splice(1, i);
+        this.queue.splice(1, i);
         return this;
       }
     }
-    return tempAnimal;
+    return undefined;
   }
 }
 
