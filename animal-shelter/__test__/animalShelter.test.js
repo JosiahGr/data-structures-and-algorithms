@@ -26,7 +26,16 @@ describe('Animal Shelter class', () => {
     testShelter.enqueue(dog);
     testShelter.enqueue(cat);
     testShelter.enqueue(dog);
-    expect(testShelter.dequeue('dog')).toEqual(dog);
-    expect(testShelter.queue[1]).toEqual(cat);
+    testShelter.dequeue(dog);
+    expect(testShelter.queue[1].type).toEqual('cat');
+  });
+  test('#dequeue with no pref removes longest waiting animal from end of array', () => {
+    const testShelter = new AnimalShelter();
+
+    testShelter.enqueue(dog);
+    testShelter.enqueue(cat);
+    testShelter.enqueue(dog);
+    testShelter.dequeue();
+    expect(testShelter.queue[1].type).toEqual('cat');
   });
 });
