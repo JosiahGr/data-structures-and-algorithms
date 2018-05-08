@@ -1,5 +1,7 @@
 'use strict';
 
+// Big O: Time O(n) Space O(h) -> h = height of tree
+
 function fizzBuzz(rootNode) {
   if (!rootNode) return undefined;
 
