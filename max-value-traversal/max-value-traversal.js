@@ -1,5 +1,7 @@
 'use strict';
 
+// Big O - Time o(n) Space o(h)
+
 let maxValue = null;
 
 function maxValueTraversal(rootNode) {
