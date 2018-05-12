@@ -5,9 +5,7 @@
 let maxValue = null;
 
 function maxValueTraversal(rootNode) {
-  if (!rootNode) {
-    return undefined;
-  }
+  if (!rootNode) return null;
 
   if (rootNode.value > maxValue) {
     maxValue = rootNode.value;
