@@ -5,6 +5,8 @@
 import Queue from './queue';
 
 function breadthTraversal(rootNode) {
+  if (!rootNode) return null;
+  
   const queue = new Queue();
   let levels = '';
   queue.enqueue(rootNode);
