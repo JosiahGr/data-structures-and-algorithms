@@ -1,32 +1,25 @@
 'use strict';
 
-const Node = require('./node');
+function merge(a, b) {
+  let nodeA = a.head;
+  let nodeB = b.head;
 
-module.exports = class LinkedList {
-  constructor() {
-    this.head = null;
+  let counter = 0;
+
+  while (nodeB) {
+    const nextNodeA = nodeA.next;
+    const nextNodeB = nodeB.next;
+
+    if (counter % 2 === 1) {
+      nodeA.next = nextNodeA;
+    } else if (counter % 2 === 0) {
+      nodeB.next = nextNodeB;
+    } 
+    counter += 1;
+    nodeA = nodeA.next;
+    nodeB = nodeB.next;
   }
+  return a;
+}
 
-  merge(a, b) {
-    const nodeA = new Node(a);
-    const nodeB = new Node(b);
-    let listA = this.head;
-
-    if (!this.head) {
-      this.head = nodeA;
-      return this;
-    }
-
-    if (!listA.next) {
-      listA.next = nodeB;
-      listA.next.next = nodeA;
-      return this;
-    }
-
-    while (listA.next) {
-      listA = listA.next;
-    }
-    
-    return undefined;
-  }
-};
+export default merge;
