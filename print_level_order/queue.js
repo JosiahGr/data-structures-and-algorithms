@@ -18,8 +18,4 @@ export default class Queue {
     if (this.storage.length === 0) return true;
     return false;
   }
-
-  peek() {
-    return this.storage[this.storage.length - 1];
-  }
 }

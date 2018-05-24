@@ -1,18 +1,20 @@
 'use strict';
 
-const LinkedList = require('../ll_merge');
+import LinkedList from '../linkedList';
+import merge from '../ll_merge';
 
 describe('linkedList.js', () => {
   test('#merge Should return nodes based on two different lists of nodes', () => {
-    const testList = new LinkedList();
-    testList.merge(1, 2);
-    testList.merge(3, 4);
-    testList.merge(5, 6);
-    expect(testList.head.next.next.next.value).toEqual(1);
-    expect(testList.head.next.next.next.value).toEqual(2);
-    expect(testList.head.next.next.next.value).toEqual(3);
-    expect(testList.head.next.next.next.value).toEqual(4);
-    expect(testList.head.next.next.next.value).toEqual(5);
-    expect(testList.head.next.next.next.value).toEqual(6);
+    const testList1 = new LinkedList();
+    const testList2 = new LinkedList();
+
+    testList1.append(1);
+    testList1.append(2);
+    testList2.append(1);
+    testList2.append(2);
+    expect(merge(testList1, testList2).head.value).toEqual(1);
+    expect(merge(testList1, testList2).head.next.value).toEqual(2);
+    expect(merge(testList1, testList2).head.next.next.value).toEqual(1);
+    expect(merge(testList1, testList2).head.next.next.next.value).toEqual(2);
   });
 });
