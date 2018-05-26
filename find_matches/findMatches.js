@@ -1,6 +1,6 @@
 'use strict';
 
-// Big O - Time O(n) Space O(1)
+// Big O - Time O(n) Space O(n) === n = w
 import Queue from './queue';
 
 class KaryTree {
@@ -19,14 +19,14 @@ class KaryTree {
     while (!queue.isEmpty()) {
       const parent = queue.dequeue();
 
-      for (let i = 0; i < parent.children.length; i++) {
-        if (parent.children.value === target) {
-          q2.push(parent.value);
+      parent.children.forEach((children) => {
+        if (children.value === target) {
+          q2.enqueue(children.value);
         }
-        return queue.enqueue(parent.children[i]);
-      }
+        return queue.enqueue(children);
+      });
     }
-    return q2;
+    return q2.storage;
   }
 }
 
