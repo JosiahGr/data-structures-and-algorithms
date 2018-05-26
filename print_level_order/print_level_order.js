@@ -1,6 +1,6 @@
 'use strict';
 
-// Big O - Time O(n) Space O(1)
+// Big O - Time O(n) Space O(n) - n === w
 import Queue from './queue';
 
 class KaryTree {
