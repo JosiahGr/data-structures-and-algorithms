@@ -11,7 +11,6 @@ class KaryTree {
   printLevelOrder() {
     const queue = new Queue();
     if (!this.root) return null;
-    console.log(this.root);
 
     queue.enqueue(this.root);
   
@@ -19,18 +18,16 @@ class KaryTree {
     this.root.level = 1;
 
     while (!queue.isEmpty()) {
-      console.log(queue);
       const parent = queue.dequeue();
-      console.log(parent.children);
 
-      for (let i = 0; i < parent.children.length; i++) {
-        parent.children[i].level = parent.level + 1;
-        return queue.enqueue(parent.children[i]);
-      }
+      parent.children.forEach((children) => {
+        children.level = parent.level + 1;
+        return queue.enqueue(children);
+      });
       if (!queue.isEmpty() && parent.level === queue.peek().level) {
         stringedLevels += parent.value;
       } else {
-        stringedLevels += `${parent.value}/n`;
+        stringedLevels += `${parent.value} `;
       }
     }
     return stringedLevels;

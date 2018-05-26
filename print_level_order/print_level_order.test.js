@@ -31,6 +31,6 @@ describe('#printLevelOrder should return each level in a string', () => {
 
     const tree = new KaryTree(one);
     
-    expect(tree.printLevelOrder()).toEqual('A/nBCDEFG/nHIJKLM/nNOPQ');
+    expect(tree.printLevelOrder()).toEqual('A BCDEFG HIJKLM NOPQ ');
   });
 });
