@@ -4,3 +4,4 @@ Without utilizing any of the built-in library methods available to your language
 
 ## Solution
 
+![unnamed](https://user-images.githubusercontent.com/34176171/40699201-e2f0ce1a-6387-11e8-98ce-fef9c1396f2d.jpg)
