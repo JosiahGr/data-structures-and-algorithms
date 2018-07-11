@@ -1,5 +1,3 @@
-// big o - time is 0(n) space is 0(n) --> n = string
-
 function nestedBrackets(string) {
   const str = string.length;
   if (string[0] !== '[' || string[0] !== '(' || string[0] !== '{') {
