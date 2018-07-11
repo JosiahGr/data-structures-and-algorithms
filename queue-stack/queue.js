@@ -10,13 +10,14 @@ class Queue {
   }
 
   dequeue() {
-    if (this.stack2.head) {
-      return this.stack2.pop();
+    if (this.stack2.length === 0) {
+      for (let i = this.stack1.length - 1; i >= 0; i--) {
+        this.stack2.push(this.stack1[i]);
+      }
     }
-    while (this.stack1.head) {
-      this.stack2.push(this.stack1.pop());
-    }
-    return this.stack2.pop();
+    this.stack2.pop();
+    this.stack1.shift();
+    return this;
   }
 }
 
