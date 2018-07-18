@@ -1,19 +1,24 @@
-function nestedBrackets(string) {
-  const str = string.length;
-  if (string[0] !== '[' || string[0] !== '(' || string[0] !== '{') {
-    return false;
-  }
-  for (let k = 1; k < str / 2; k++) {
-    if (k === '[' || k === '{' || k === '(') {
-      if (string[str - k] === ']' || string[str - k] === '}' || string[str - k] === ')') {
-        if (string[k] === string[str - k]) { 
-          return true;
-        }
-      }
+'use strict';
+
+const validation = (str) => {
+  const checker = [];
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === '(' || str[i] === '{' || str[i] === '[') {
+      checker.push(str[i]);
+    }
+    if ((str[i] === ')' && checker[checker.length - 1] === '(') 
+    || (str[i] === '}' && checker[checker.length - 1] === '{')
+    || (str[i] === ']' && checker[checker.length - 1] === '[')) {
+      checker.pop();
+    } else if ((str[i] === ')' && checker[checker.length - 1] !== '(') 
+    || (str[i] === '}' && checker[checker.length - 1] !== '{')
+    || (str[i] === ']' && checker[checker.length - 1] !== '[')) {
+      return false;
     }
   }
+  if (checker.length === 0) return true;
   return false;
-} 
+};
 
-export default nestedBrackets;
-
+export default validation;

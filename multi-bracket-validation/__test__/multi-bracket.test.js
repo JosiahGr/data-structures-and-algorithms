@@ -1,8 +1,17 @@
-// import nestedBrackets from '../multi-bracket'; 
+'use strict';
 
-// describe('multi-bracket.js', () => {
-//   test('#nestedBrackets', () => {
-    
-//     expect(true).toEqual(true);
-//   });
-// });
+import validation from '../multi-bracket';
+
+describe('multi bracket validation function', () => {
+  test('check strings that should return true', () => {
+    expect(validation('({[]})')).toEqual(true);
+    expect(validation('({[][]})')).toEqual(true);
+    expect(validation('({[()()]})')).toEqual(true);
+  });
+
+  test('check strings that should return false', () => {
+    expect(validation('({[})')).toEqual(false);
+    expect(validation('{[}]')).toEqual(false);
+    expect(validation('({[)')).toEqual(false);
+  });
+});
