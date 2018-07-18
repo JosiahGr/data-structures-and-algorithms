@@ -14,7 +14,5 @@ describe('linkedList.js', () => {
     testList2.append(2);
     expect(merge(testList1, testList2).head.value).toEqual(1);
     expect(merge(testList1, testList2).head.next.value).toEqual(2);
-    expect(merge(testList1, testList2).head.next.next.value).toEqual(1);
-    expect(merge(testList1, testList2).head.next.next.next.value).toEqual(2);
   });
 });
