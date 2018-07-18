@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (arr) => {
+const largestProductArray = (arr) => {
   let highestProduct = 0;
 
   for (let k = 0; k < arr.length; k++) {
@@ -23,4 +23,4 @@ module.exports = (arr) => {
   return highestProduct;
 };
 
-largestProductArray();
+export default largestProductArray;
