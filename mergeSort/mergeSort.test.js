@@ -1,6 +1,6 @@
 'use strict';
 
-import mergeSort from '../merge-sort';
+import mergeSort from './mergeSort';
 
 const arr = [9, 34, 23, 6, 88, 34, 1, 43, 2, 3, 44, 5, 67, 35, 12, 4, 62, 54, 23, 8];
 
