@@ -9,4 +9,7 @@ describe('#evenIntegers', () => {
   test('should return false if any values of integer is not even', () => {
     expect(evenIntegers(2212)).toEqual(false);
   });
+  test('should return false if any values of integer is not even, including letters', () => {
+    expect(evenIntegers('2248d88864f2222')).toEqual(false);
+  });
 });
