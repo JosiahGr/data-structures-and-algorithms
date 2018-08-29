@@ -1,6 +1,6 @@
 'use strict';
 
-function twoSum(numbers, target) {
+function addSums(numbers, target) {
   for (let x = 0; x < numbers.length; x++) {
     for (let y = x + 1; y < numbers.length; y++) {
       if (numbers[x] + numbers[y] === target) {
@@ -8,7 +8,6 @@ function twoSum(numbers, target) {
       }
     }
   }
-  return undefined;
 }
 
-export default twoSum;
+export default addSums;
