@@ -1,14 +1,15 @@
 function cap(string) {
   const arr1 = [];
   const arr2 = [];
-  const stringArr = string.split('');
-  for (let i = 0; i < stringArr.length; i++) {
+  const string1 = string;
+  const arr = string1.split('');
+  for (let i = 0; i < arr.length; i++) {
     if (i % 2 === 0) {
-      arr1.push(stringArr[i].toUpperCase());
-      arr2.push(stringArr[i]);
+      arr1.push(arr[i].toUpperCase());
+      arr2.push(arr[i]);
     } else {
-      arr1.push(stringArr[i]);
-      arr2.push(stringArr[i].toUpperCase());
+      arr1.push(arr[i]);
+      arr2.push(arr[i].toUpperCase());
     }
   }
   return [arr1.join(''), arr2.join('')];
