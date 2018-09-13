@@ -1,6 +1,11 @@
 ## Challenge
 
-Write a function that checks whether a string is a palindrome or not. 
+Write a function that checks whether a string is a palindrome or not.
+
+## Big O
+
+space o(n)
+time o(n)
 
 ## Soltuion
 
