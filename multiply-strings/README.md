@@ -12,3 +12,5 @@ time O(n)
 space O(1)
 
 ## Solution
+
+![img_0702](https://user-images.githubusercontent.com/34176171/45714276-fc031c80-bb45-11e8-8c40-edc6a7c396f3.JPG)
