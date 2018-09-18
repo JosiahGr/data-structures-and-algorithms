@@ -4,9 +4,9 @@ import multiplyStr from './multiplyStrings';
 
 describe('#multiplyStr', () => {
   test('Should return product of two numbers', () => {
-    expect(multiplyStr('2', '2', '0')).toEqual('4');
-    expect(multiplyStr('3', '0', '4')).toEqual('12');
-    expect(multiplyStr('0', '1', '1')).toEqual('1');
+    expect(multiplyStr('2', '2')).toEqual('4');
+    expect(multiplyStr('3', '4')).toEqual('12');
+    expect(multiplyStr('1', '1')).toEqual('1');
   });
   test('Should return product of three numbers', () => {
     expect(multiplyStr('2', '2', '2')).toEqual('8');
