@@ -1,4 +1,6 @@
-function cap(string) {
+'use strict';
+
+export default function altCap(string) {
   const arr1 = [];
   const arr2 = [];
   const string1 = string;
@@ -14,5 +16,3 @@ function cap(string) {
   }
   return [arr1.join(''), arr2.join('')];
 }
-
-export default cap;
