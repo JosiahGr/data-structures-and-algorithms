@@ -1,9 +1,10 @@
 'use strict';
 
-const evenIntegers = (n) => {
-  const string = n.toString();
+const evenIntegers = (str) => {
+  const string = str.toString();
+
   for (let i = 0; i < string.length; i++) {
-    if (Number(string[i]) % 2 !== 0) {
+    if (string[i] % 2 !== 0) {
       return false;
     }
   }   
