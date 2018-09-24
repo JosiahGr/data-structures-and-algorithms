@@ -33,6 +33,6 @@ describe('#leftTree', () => {
     seven.right = nine;
 
     expect(one.left.value).toEqual(2);
-    expect(leftTree(tree.root)).toEqual('246308');
+    expect(leftTree(tree.root)).toEqual('26308');
   });
 });
