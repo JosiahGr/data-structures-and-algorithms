@@ -1,11 +1,20 @@
 'use strict';
 
-export default function leftTree(rootnode) {
+const leftTree = (rootnode) => {
   if (!rootnode) return undefined;
   let leftBranches = '';
-  if (rootnode.left !== null) leftBranches += `${rootnode.left.value}`;
-  leftTree(rootnode.left);
-  leftTree(rootnode.right);
+  
+  const findleftTree = (node) => {
+    if (!node) return null;
+    if (node.left !== null) leftBranches = `${leftBranches}${node.left.value}`;
+   
+    findleftTree(node.left);
+    findleftTree(node.right);
+    return undefined;
+  };
 
+  findleftTree(rootnode);
   return leftBranches;
-}
+};
+
+export default leftTree;
