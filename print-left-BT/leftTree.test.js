@@ -5,6 +5,10 @@ import BinaryTree from './binary-tree';
 import leftTree from './leftTree';
 
 describe('#leftTree', () => {
+  test('should return null if empty', () => {
+    const tree = new BinaryTree(null);
+    expect(leftTree(tree.root)).toEqual(undefined);
+  });
   test('Should return the values of all left branches', () => {
     const one = new Node(1);
     const two = new Node(2);
@@ -28,6 +32,7 @@ describe('#leftTree', () => {
     seven.left = eight;
     seven.right = nine;
 
-    expect(leftTree(tree)).toEqual('246308');
+    expect(one.left.value).toEqual(2);
+    expect(leftTree(tree.root)).toEqual('246308');
   });
 });
