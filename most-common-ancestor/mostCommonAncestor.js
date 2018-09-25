@@ -5,7 +5,7 @@ const commonAncestor = (array) => {
   let maxEl = array[0]; 
   let maxCount = 1;
 
-  for (let i = 0; i < array.length - 1; i++) {
+  for (let i = 0; i < array.length; i++) {
     const el = array[i];
 
     if (Map[el] === null) {
