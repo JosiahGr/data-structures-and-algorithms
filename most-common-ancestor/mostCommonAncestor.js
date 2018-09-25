@@ -1,7 +1,7 @@
 'use strict';
 
 const commonAncestor = (arr) => {
-  const Map = {};
+  const map = {};
   const array = arr;
   let maxEl = array[0]; 
   let maxCount = 1;
@@ -9,13 +9,13 @@ const commonAncestor = (arr) => {
   for (let i = 0; i < array.length; i++) {
     const el = array[i];
 
-    if (!Map[el]) {
-      Map[el] = 1;
+    if (map[el] === undefined) {
+      map[el] = 1;
     } else {
-      Map[el] += 1;
+      map[el] += 1;
     }
-    if (Map[el] > maxCount) {
-      maxEl = Map[el];
+    if (map[el] > maxCount) {
+      maxEl = el;
       maxCount += 1;
     }
   }
