@@ -6,4 +6,11 @@ If there are even nodes, then there would be two middle nodes, we need to print 
 
 ## Big o
 
+Space o(1)
+Time o(n)
+
 ## Solution
+
+![img_0729](https://user-images.githubusercontent.com/34176171/46163738-d4483e80-c240-11e8-985f-fe39c713aaf9.JPG)
+
+
