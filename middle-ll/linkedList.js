@@ -1,11 +1,10 @@
 'use strict';
 
-const Node = require('./node');
+import Node from './node';
 
 module.exports = class LinkedList {
   constructor() {
     this.head = null;
-    this.tail = null;
   }
 
   append(value) {
@@ -20,44 +19,6 @@ module.exports = class LinkedList {
       currentNode = currentNode.next;
     }
     currentNode.next = node;
-    return this;
-  }
-
-  insertBefore(value, newValue) {
-    const node = new Node(newValue);
-    let backOne = this.head;
-    let currentOne = backOne.next;
-    
-    while (currentOne) {
-      if (currentOne.value === value) {
-        backOne.next = node;
-        node.next = currentOne;
-        return this;
-      }
-      backOne = currentOne;
-      currentOne = currentOne.next;
-    }
-    return null;
-  }
-
-  insertAfter(value, newValue) {
-    const node = new Node(newValue);
-    let currentOne = this.head;
-
-    if (!this.head) {
-      this.head = node;
-      return this;
-    }
-    
-    while (currentOne) {
-      if (currentOne.value === value) {
-        const placeholder = currentOne.next;
-        currentOne.next = node;
-        currentOne.next.next = placeholder;
-        break;
-      }
-      currentOne = currentOne.next;
-    }
     return this;
   }
 };

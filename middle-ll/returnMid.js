@@ -1,14 +1,10 @@
 'use strict';
 
-import Node from './node';
+const findMid = (node) => {
+  // if (!node.head) {
+  //   return undefined;
+  // }
 
-const findMid = (value) => {
-  const node = new Node(value);
-
-  if (!node.head) {
-    return undefined;
-  }
-  
   let mid = node.head;
   let current = node.head;
   let counter = 0;
@@ -22,7 +18,7 @@ const findMid = (value) => {
   }
   mid = mid.next;
 
-  return mid;
+  return mid.value;
 };
 
 export default findMid;
