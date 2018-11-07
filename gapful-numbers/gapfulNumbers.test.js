@@ -11,4 +11,8 @@ describe('#mindTheGap', () => {
     expect(mindTheGap(210)).toEqual(false);
     expect(mindTheGap(211)).toEqual(false);
   });
+  test('should return false for being too small a number', () => {
+    expect(mindTheGap(21)).toEqual(false);
+    expect(mindTheGap(20)).toEqual(false);
+  });
 });
