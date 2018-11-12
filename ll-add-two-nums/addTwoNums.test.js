@@ -12,7 +12,7 @@ describe('linkedList.js', () => {
     testList1.append(2);
     testList2.append(1);
     testList2.append(2);
-    expect(add(testList1, testList2).head.value).toEqual(1);
-    expect(add(testList1, testList2).head.next.value).toEqual(2);
+
+    expect(add(testList1, testList2)).toEqual(testList1.head.value);
   });
 });
