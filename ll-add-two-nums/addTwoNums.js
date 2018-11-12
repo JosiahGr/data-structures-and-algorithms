@@ -4,6 +4,7 @@ import Node from './node';
 
 function _add(value) { // eslint-disable-line
   const length = value.length; // eslint-disable-line
+  console.log(length);
   let counter = 0;
   value.split('');
   const node = new Node(value[counter]);
@@ -14,7 +15,7 @@ function _add(value) { // eslint-disable-line
     counter += 1;
     currentNode.next = node;
   }
-  return this;
+  return currentNode.next;
 }
 
 export default function add(ll1, ll2) {
