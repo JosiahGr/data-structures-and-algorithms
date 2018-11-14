@@ -4,18 +4,17 @@ import Node from './node';
 
 function _add(value) { // eslint-disable-line
   const length = value.length; // eslint-disable-line
-  console.log(length);
   let counter = 0;
   value.split('');
   const node = new Node(value[counter]);
 
   let currentNode = node;
-  while (counter < length && currentNode.next) {
+  while (counter < length) {
     currentNode = currentNode.next;
     counter += 1;
     currentNode.next = node;
   }
-  return currentNode.next;
+  return currentNode;
 }
 
 export default function add(ll1, ll2) {
