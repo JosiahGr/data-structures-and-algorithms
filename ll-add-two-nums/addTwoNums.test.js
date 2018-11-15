@@ -13,6 +13,6 @@ describe('linkedList.js', () => {
     testList2.append(1);
     testList2.append(2);
 
-    expect(add(testList1, testList2)).toEqual(testList1.head.value);
+    expect(add(testList1, testList2)).toEqual({"head": {"next": {"next": null, "value": {"next": null, "value": "2"}}, "value": {"next": null, "value": "4"}}}); // eslint-disable-line
   });
 });
