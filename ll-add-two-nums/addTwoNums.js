@@ -1,6 +1,5 @@
 'use strict';
 
-import Node from './node';
 import LinkedList from './linkedList';
 
 function _add(value) { // eslint-disable-line
