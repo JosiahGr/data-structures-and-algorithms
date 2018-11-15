@@ -1,20 +1,18 @@
 'use strict';
 
-import Node from './node';
+import LinkedList from './linkedList';
 
 function _add(value) { // eslint-disable-line
   const length = value.length; // eslint-disable-line
   let counter = 0;
-  value.split('');
-  const node = new Node(value[counter]);
+  const newValue = value.split('');
+  const newList = new LinkedList();
 
-  let currentNode = node;
-  while (counter < length) {
-    currentNode = currentNode.next;
+  while (counter <= length) {
+    newList.append(newValue[counter]);
     counter += 1;
-    currentNode.next = node;
   }
-  return currentNode;
+  return newList;
 }
 
 export default function add(ll1, ll2) {
