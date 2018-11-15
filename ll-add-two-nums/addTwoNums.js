@@ -6,13 +6,12 @@ import LinkedList from './linkedList';
 function _add(value) { // eslint-disable-line
   const length = value.length; // eslint-disable-line
   let counter = 0;
-  value.split('');
-  const node = new Node(value[counter]);
+  const newValue = value.split('');
   const newList = new LinkedList();
 
-  while (counter < length) {
+  while (counter <= length) {
+    newList.append(newValue[counter]);
     counter += 1;
-    newList.append(node);
   }
   return newList;
 }
