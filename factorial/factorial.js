@@ -1,8 +1,8 @@
 'use strict';
 
 export default function FirstFactorial(num) { 
-  let counter = num; // 4
-  let result = num; // 4
+  let counter = num;
+  let result = num;
   
   while (counter > 1) {
     counter -= 1;
