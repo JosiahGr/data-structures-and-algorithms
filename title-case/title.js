@@ -1,6 +1,6 @@
 'use strict';
 
-export default function LetterCapitalize(str) { 
+export default function letterCapitalize(str) { 
   const wordArr = str.split(' ');
   
   for (let i = 0, n = wordArr.length; i < n; i++) {
