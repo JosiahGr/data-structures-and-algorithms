@@ -1,6 +1,6 @@
 'use strict';
 
-function addSums(numbers, target) {
+export default function addSums(numbers, target) {
   for (let x = 0; x < numbers.length; x++) {
     for (let y = x + 1; y < numbers.length; y++) {
       if (numbers[x] + numbers[y] === target) {
@@ -8,6 +8,5 @@ function addSums(numbers, target) {
       }
     }
   }
+  return undefined;
 }
-
-export default addSums;
