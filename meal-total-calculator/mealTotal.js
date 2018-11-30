@@ -3,6 +3,7 @@
 export default function mealTotal(amount, tip, tax) {
   let tipp = tip.replace('%', '');
   let taxx = tax.replace('%', '');
+  
   if (tipp < 10 || taxx < 10) {
     tipp = `0.0${tipp}`;
     taxx = `0.0${taxx}`;
