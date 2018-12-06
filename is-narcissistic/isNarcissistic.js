@@ -1,24 +1,18 @@
 'use strict';
 
 export default function isNarcissistic(num) {
-  const powerTo = num.length;
-  let counter = 0;
-  let counter2 = 0;
-  let total = 0;
+  const newNum = num.toString();
   let finalTotal = 0;
 
-  while (counter2 < powerTo - 1) {
-    total += num[counter] * num[counter];
-    counter2 += 1;
-  }
-
-  while (counter < powerTo) {
+  for (let i = 0; i < newNum.length; i++) {
+    let total = newNum[i];
+    for (let n = 0; n < newNum.length - 1; n++) {
+      total *= newNum[i];
+    }
     finalTotal += total;
-    counter2 = 0;
-    counter += 1;
   }
 
-  if (total === num) {
+  if (Number(finalTotal) === num) {
     return true;
   }
   return false;
