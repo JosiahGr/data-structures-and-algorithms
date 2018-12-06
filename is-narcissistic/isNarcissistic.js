@@ -4,6 +4,10 @@ export default function isNarcissistic(num) {
   const newNum = num.toString();
   let finalTotal = 0;
 
+  if (newNum.length === 1) {
+    return true;
+  }
+
   for (let i = 0; i < newNum.length; i++) {
     let total = newNum[i];
     for (let n = 0; n < newNum.length - 1; n++) {
@@ -12,7 +16,7 @@ export default function isNarcissistic(num) {
     finalTotal += total;
   }
 
-  if (Number(finalTotal) === num) {
+  if (finalTotal === num) {
     return true;
   }
   return false;
