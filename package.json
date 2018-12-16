@@ -1,7 +1,7 @@
 {
   "name": "data-structures-and-algorithms",
   "version": "1.0.0",
-  "description": "Day 1 whiteboarding challenge.",
+  "description": "whiteboarding challenges",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
